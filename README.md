@@ -1,17 +1,14 @@
-![Integrando seu projeto React com APIs](thumbnail.png)
 
 # Alfood
 
-O Alfood é um site que lista restaurantes e pratos do menu. 
-É um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
+O Alfood é um MVP em desenvolvimento que lista restaurantes e pratos de seus menus. Ainda está em fase inicial, mas há muitos planos para adicionar novas funcionalidades.
 
 <img src="screencapture.png" alt="Imagem do Alfood" width="50%">
 
 
 ## 🔨 Funcionalidades do projeto
 
-O Alfood começa com uma listagem estática de seu conteúdo e é esse o problema que queremos resolver.
-No decorrer do curso, vamos implementar toda a camada de comunicação com a API.
+Atualmente, o Alfood apresenta uma listagem estática de restaurantes e pratos. Nosso objetivo ao longo do desenvolvimento é integrar o site com uma API, permitindo a atualização dinâmica e a busca de novos conteúdos.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
@@ -24,10 +21,13 @@ Se liga nessa lista de tudo que usaremos nesse treinamento:
 
 ## 🛠️ Abrir e rodar o projeto
 
-Para abrir e rodar o projeto, execute npm i para instalar as dependências e npm start para inicar o projeto.
+Para rodar o projeto em sua máquina local:
 
-Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
+1. Clone o repositório e navegue até o diretório do projeto.
+2. Execute o comando npm i para instalar as dependências.
+3. Execute npm start para iniciar o projeto.
+4. Acesse o projeto em seu navegador pelo endereço: http://localhost:3000/.
 
 ## 📚 Mais informações do curso
 
-Busque na plataforma da Alura o curso **Integrando seu projeto React com APIs** publicado na Escola Frontend.
+Este projeto faz parte do curso Integrando seu projeto React com APIs da Alura, publicado na Escola Frontend.
