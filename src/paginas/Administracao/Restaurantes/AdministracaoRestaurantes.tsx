@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import IRestaurante from "../../../interfaces/IRestaurante";
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, AppBar, Box, Container, Toolbar, Typography, Link } from "@mui/material";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom"
 import http from "../../../http";
 
@@ -23,46 +23,38 @@ const AdministracaoRestaurantes = () => {
   };
 
   return (
-    <>
-      <Box>
-        <Container maxWidth="lg" sx={{ mt: 1 }}>
-          <Paper sx={{ px: 2 }}>
-            <TableContainer component={Paper}>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Nome</TableCell>
-                    <TableCell>Editar</TableCell>
-                    <TableCell>Excluir</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {restaurantes.map((restaurante) => (
-                    <TableRow key={restaurante.id}>
-                      <TableCell>{restaurante.nome}</TableCell>
-                      <TableCell>
-                        <RouterLink to={`/admin/restaurantes/${restaurante.id}`}>
-                          editar
-                        </RouterLink>
-                      </TableCell>
-                      <TableCell>
-                        <Button
-                          variant="outlined"
-                          color="error"
-                          onClick={() => excluir(restaurante)}
-                        >
-                          Excluir
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Paper>
-        </Container>
-      </Box>
-    </>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Nome</TableCell>
+            <TableCell>Editar</TableCell>
+            <TableCell>Excluir</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {restaurantes.map((restaurante) => (
+            <TableRow key={restaurante.id}>
+              <TableCell>{restaurante.nome}</TableCell>
+              <TableCell>
+                <RouterLink to={`/admin/restaurantes/${restaurante.id}`}>
+                  editar
+                </RouterLink>
+              </TableCell>
+              <TableCell>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  onClick={() => excluir(restaurante)}
+                >
+                  Excluir
+                </Button>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 
