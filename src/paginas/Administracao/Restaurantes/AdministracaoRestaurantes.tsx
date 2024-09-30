@@ -24,22 +24,6 @@ const AdministracaoRestaurantes = () => {
 
   return (
     <>
-      <AppBar position="static">
-        <Container maxWidth="xl">
-          <Toolbar>
-            <Typography variant="h6">Administração</Typography>
-            <Box sx={{ display: "flex", flexGrow: 1 }}>
-              <Link component={RouterLink} to="/admin/restaurantes">
-                <Button sx={{ my: 2, color: "white" }}>Restaurante</Button>
-              </Link>
-              <Link component={RouterLink} to="/admin/restaurantes/novo">
-                <Button sx={{ my: 2, color: "white" }}>Novo Restaurante</Button>
-              </Link>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-
       <Box>
         <Container maxWidth="lg" sx={{ mt: 1 }}>
           <Paper sx={{ px: 2 }}>
