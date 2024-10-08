@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography }from "@mui/material";
+import { Box, Button, FormControl, Input, InputLabel, MenuItem, Select, TextField, Typography }from "@mui/material";
 import { useEffect, useState } from "react";
 import http from "../../../http";
 import ITag from "../../../interfaces/ITag";
@@ -12,7 +12,7 @@ const FormularioPrato = () => {
 
   
   useEffect(() => {
-        http.get< { tags: ITag } >('tags/')
+        http.get< { tags: ITag[] } >('tags/')
         .then(resposta => setTags(resposta.data.tags))
   }, [])
   
@@ -40,15 +40,27 @@ const FormularioPrato = () => {
           variant="standard"
           fullWidth
           required
+          margin="dense"
         />
         <TextField
           value={nomePrato}
           onChange={(evento) => setNomePrato(evento.target.value)}
-          label="Nome do Prato"
+          label="Descrição do Prato"
           variant="standard"
           fullWidth
           required
+          margin="dense"
         />
+
+        <FormControl margin="dense" fullWidth >
+          <InputLabel id="select-tag">Tag</InputLabel>
+          <Select labelId="select-tag" >
+              {tags.map(tag => <MenuItem key={tag.id} value={tag.id}>
+                  {tag.value}
+              </MenuItem>)}
+          </Select>
+        </FormControl>
+
         <Button
           sx={{ marginTop: 1 }}
           type="submit"
